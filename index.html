@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LamiMap</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>LamiMap</h1>
+      <p>Discover affordable karinderyas in Cebu 🥘</p>
+    </header>
+
+    <section class="submit-form">
+      <h2>Add a Karinderya</h2>
+      <form @submit.prevent="addKarinderya">
+        <input v-model="newName" type="text" placeholder="Name" required />
+        <input v-model="newLocation" type="text" placeholder="Location" required />
+        <input v-model="newPrice" type="text" placeholder="Price Range" required />
+        <input v-model="newMap" type="url" placeholder="Google Maps Link" required />
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <section v-for="(k, index) in karinderyas" :key="index" class="karinderya">
+      <h2>{{ k.name }}</h2>
+      <p>📍 {{ k.location }}</p>
+      <p>💸 {{ k.price }}</p>
+      <a :href="k.map" target="_blank">View on Google Maps</a>
+    </section>
+
+    <footer>
+      <p>LamiMap by a lazy dev from Cebu 🍚</p>
+      <div class="tip">
+        Want to support? GCash: 0917-xxx-xxxx<br />
+        or <a href="#">Buy me a coffee ☕</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>
