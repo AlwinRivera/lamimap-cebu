@@ -1,1 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fefefe;
+  color: #333;
+  line-height: 1.6;
+  padding: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #e67300;
+}
+
+header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.karinderya {
+  background: #fffbe6;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid #ff9900;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.karinderya h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #cc5200;
+}
+
+.karinderya p {
+  margin: 0.2rem 0;
+  color: #444;
+}
+
+.karinderya a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.karinderya a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+footer .tip {
+  background: #f0f0f0;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.submit-form {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+
+.submit-form h2 {
+  margin-bottom: 1rem;
+  color: #cc5200;
+}
+
+.submit-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.submit-form input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-form button {
+  padding: 0.6rem;
+  background: #ff9900;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-form button:hover {
+  background: #cc5200;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .karinderya {
+    padding: 0.8rem 1rem;
+  }
+}
